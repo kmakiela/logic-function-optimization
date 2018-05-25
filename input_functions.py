@@ -37,7 +37,7 @@ def validate(sentence):
             if last == ')': return False
             if c.isnumeric():
                 if last in [None, str(ops)+"()"]:
-                    if int(c) not in ["01"]: return False
+                    if c not in "01": return False
             last = c
         elif c in ops:
             if last in [None, str(ops)+"("] and c != '~': return False

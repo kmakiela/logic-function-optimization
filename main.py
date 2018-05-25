@@ -17,7 +17,10 @@ def main():
             for i in range(len(answers)):
                 if answers[i]: minterms.append(i)
             print("\tMinterms: ", minterms)
-            minimize(variables, minterms)
+            if len(minterms) == 0:
+                print('Always false')
+            else:
+                minimize(variables, minterms)
         else:
             print("Wrong sentence, try again")
 

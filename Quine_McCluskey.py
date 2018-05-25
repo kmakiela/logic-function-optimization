@@ -10,7 +10,7 @@ def minimize(variables, minterms):
             for j in range(len(variables) - len(minterms[i])):
                 minterms[i] = '0' + minterms[i]
         elif len(minterms[i]) > len(variables):
-            print("What minterms are these??\n")
+            print("Error: more minterms  than variables\n")
             return
         index = minterms[i].count('1')
         group[index].append(minterms[i])
